@@ -205,3 +205,175 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+### 核心 Python 规则 ###
+__pycache__/  # Python 字节码缓存
+*.py[cod]    # 所有 Python 编译文件
+*.so         # C 扩展编译结果
+*.egg-info/  # 包元数据
+dist/        # 打包分发目录
+build/       # 构建目录
+.python-version  # pyenv 版本文件
+
+### 虚拟环境 ###
+# 所有常见虚拟环境目录
+venv/
+.env/
+env/
+.venv/
+venv*/
+env*/
+.venv*/
+virtualenv*/
+ENV/         # virtualenvwrapper
+.conda/      # Conda 环境
+
+### 操作系统垃圾文件 ###
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# Windows
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Linux
+.directory
+*~
+.nfs*
+.Trash-*
+
+### IDE 和编辑器配置 ###
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# PyCharm/IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+
+# Eclipse
+.pydevproject
+.project
+.settings/
+bin/
+
+# Vim
+*.swp
+*.swo
+*.un~
+.session.vim
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+.\#*
+TAGS
+
+# Sublime Text
+*.sublime-*
+sftp-config.json
+
+### 测试和覆盖率报告 ###
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.tox/
+nosetests.xml
+junit.xml
+test-results/
+
+### 日志文件 ###
+*.log
+*.log.*
+logs/
+
+### 依赖管理文件 ###
+# 不要忽略这些文件！它们是必须提交的：
+# !requirements.txt
+# !Pipfile
+# !Pipfile.lock
+# !environment.yml
+
+### 构建系统 ###
+# Setuptools
+*.egg
+*.egg-info/
+pip-wheel-metadata/
+
+# Poetry
+poetry.lock
+# 注意: pyproject.toml 应该提交
+
+# Cython
+*.c
+*.pyd
+
+### 文档生成 ###
+docs/_build/
+docs/build/
+docs/api/
+
+### 数据科学相关 ###
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# 大型数据文件
+*.h5
+*.hdf5
+*.feather
+*.parquet
+*.csv
+*.xlsx
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.pt
+*.pth
+*.bin
+
+### 环境变量 ###
+.env
+.secrets
+config.ini
+credentials.json
+*.key
+*.pem
+
+### 其他 ###
+# 包管理器
+node_modules/
+bower_components/
+
+# 压缩文件
+*.zip
+*.tar.gz
+*.7z
+
+# 临时文件
+*.tmp
+*.bak
