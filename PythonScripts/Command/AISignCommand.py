@@ -7,8 +7,7 @@ from PythonScripts.Config.BotConfig import *
 TRIGGER_WORDS = TRIGGER_WORDS
 
 class AISignCommand(Command):
-    aliases = ['打卡']
-
+    aliases = ['打卡',"签到"]
 
     # 金币数据存储路径
     GOLD_DATA_FILE = "Json/gold_data.json"

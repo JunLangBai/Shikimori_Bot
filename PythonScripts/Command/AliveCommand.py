@@ -3,7 +3,7 @@ from PythonScripts.Command.Command import Command
 
 class AliveCommand(Command):
 
-    aliases = ["存活确认", "确认存活"]
+    aliases = ["存活确认", "确认存活","存活"]
 
     def execute(self, msg, chat):
         print("get")
