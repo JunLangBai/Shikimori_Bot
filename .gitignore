@@ -304,6 +304,7 @@ htmlcov/
 nosetests.xml
 junit.xml
 test-results/
+Json/
 
 ### 日志文件 ###
 *.log
@@ -355,7 +356,6 @@ docs/api/
 *.pt
 *.pth
 *.bin
-
 ### 环境变量 ###
 .env
 .secrets
