@@ -7,4 +7,3 @@ class AliveCommand(Command):
     def execute(self,msg,chat):
         print("get")
         chat.SendMsg(msg="也活着", who=msg.chat_info()['chat_name'], clear=True)
-

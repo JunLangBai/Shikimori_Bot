@@ -31,7 +31,6 @@ def on_message(msg, chat):
     GroupData(msg,json_path)
     if isinstance(msg, FriendMessage):
         engine.execute_command(msg,chat)
-        chat.SendMsg(msg="你好", who=msg.chat_info()['chat_name'], clear=False,at=msg.sender)
 
 wx.AddListenChat(nickname="傻逼机器测试群", callback=on_message)
 
