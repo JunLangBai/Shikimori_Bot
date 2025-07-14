@@ -5,13 +5,13 @@ from pathlib import Path
 
 from PythonScripts.Command.Command import Command
 from PythonScripts.Command import *
-from PythonScripts.libraries.AIChat.AIChat import *
 
 class CommandEngine:
     def __init__(self):
         live =  AliveCommand()
         sign = AISignCommand()
-        self.commands = {'存活':live, '签到':sign}
+        chat = AIChatCommand()
+        self.commands = {'存活':live, '签到':sign, '式守':chat}
         self._import_command_modules()
         self._discover_commands()
 

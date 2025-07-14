@@ -85,3 +85,12 @@
 2025-07-14 18:34:18.913 sessionbox.py[247] _click -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}
 2025-07-14 18:35:16.207 sessionbox.py[247] _click -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}
 2025-07-14 18:36:36.090 sessionbox.py[247] _click -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}
+2025-07-14 18:43:24.023 sessionbox.py[247] _click -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}
+2025-07-14 19:05:06.036 sessionbox.py[247] _click -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}
+2025-07-14 19:08:35.440 sessionbox.py[247] _click -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}
+2025-07-14 19:10:26.520 sessionbox.py[247] _click -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}
+2025-07-14 19:11:19.244 sessionbox.py[247] _click -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}
+2025-07-14 19:13:55.779 sessionbox.py[247] _click -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}
+2025-07-14 19:20:11.846 sessionbox.py[247] _click -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}
+2025-07-14 19:33:40.567 sessionbox.py[247] _click -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}
+2025-07-14 19:35:45.061 sessionbox.py[247] _click -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}
