@@ -33,7 +33,7 @@ def on_message(msg, chat):
     if isinstance(msg, FriendMessage):
         engine.execute_command(msg,chat)
 
-wx.AddListenChat(nickname="傻逼机器测试群", callback=on_message)
+wx.AddListenChat(nickname="GenShin Six™️", callback=on_message)
 
 # 保持程序运行
 wx.KeepRunning()
