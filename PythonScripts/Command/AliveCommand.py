@@ -2,7 +2,7 @@ from PythonScripts.Command.Command import Command
 
 
 class AliveCommand(Command):
-    strict = False
+
     aliases = ["存活确认", "确认存活"]
 
     def execute(self, msg, chat):

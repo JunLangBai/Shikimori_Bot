@@ -11,7 +11,7 @@ class CommandEngine:
         live =  AliveCommand()
         sign = AISignCommand()
         chat = AIChatCommand()
-        self.commands = {'存活':live, '签到':sign, '式守':chat}
+        self.commands = {}
         self._import_command_modules()
         self._discover_commands()
 
