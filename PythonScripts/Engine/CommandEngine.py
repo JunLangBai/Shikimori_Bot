@@ -4,11 +4,14 @@ import time
 from pathlib import Path
 
 from PythonScripts.Command.Command import Command
-
+from PythonScripts.Command import *
+from PythonScripts.libraries.AIChat.AIChat import *
 
 class CommandEngine:
     def __init__(self):
-        self.commands = {}
+        live =  AliveCommand()
+        sign = AISignCommand()
+        self.commands = {'存活':live, '签到':sign}
         self._import_command_modules()
         self._discover_commands()
 
@@ -65,7 +68,7 @@ class CommandEngine:
     def _discover_commands(self):
         print("开始发现命令...")
         """自动发现并注册所有命令子类及其别名"""
-        command_classes = self._get_all_subclasses(Command)
+        command_classes = self._get_all_subclasses(Command.Command)
         print(f"发现 {len(command_classes)} 个命令类")
 
         if not command_classes:
@@ -134,5 +137,7 @@ class CommandEngine:
                     print(f"命令执行出错: {e}")
                     return False
 
-        print(f"未匹配到任何命令: {content}")
+        print(f"未匹配到任何命令: {content}")  # 未找到指令，则执行普通聊天
+        # AIchat = AIChatCommand()
+        # AIchat.execute(msg=msg, chat=chat)
         return False

@@ -6,7 +6,7 @@ from Config.BotData import GroupData
 from pathlib import Path
 
 from PythonScripts.Engine.CommandEngine import CommandEngine
-
+from PythonScripts.libraries.AIChat.AIChat import *
 wx = WeChat()
 engine = CommandEngine()
 

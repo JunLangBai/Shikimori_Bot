@@ -1,7 +1,11 @@
 from PythonScripts.Command.Command import Command
+from PythonScripts.libraries.AIChat.AIChat import *
 
-class AIChatCommand(Command):
+
+class AliveCommand(Command):
+    strict = False
     aliases = ["式守"]
 
-    def execute(self,msg,chat):
-        chat.SendMsg(msg="也活着", who=msg.chat_info()['chat_name'], clear=True)# 宽松匹配模式
+    def execute(self, msg, chat):
+        AIchat = AIChatCommand()
+        AIchat.execute(msg=msg, chat=chat)

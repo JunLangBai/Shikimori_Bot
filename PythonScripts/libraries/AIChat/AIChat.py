@@ -3,14 +3,11 @@ import time
 import threading
 from collections import deque
 from openai import OpenAI
-from PythonScripts.Command.AIChatCommand import TRIGGER_WORDS, STRICT_MODE
+from PythonScripts.Command.AISignCommand import TRIGGER_WORDS, STRICT_MODE
 from PythonScripts.Config.BotConfig import OLLAMA_BASE_URL, OLLAMA_API_KEY, MODEL_NAME, SYSTEM_PROMPT
 
-class AIChatCommand:
-    # 使用外部配置
-    aliases = TRIGGER_WORDS
-    strict = STRICT_MODE
 
+class AIChatCommand():
     def __init__(self):
         # 初始化OpenAI客户端
         self.client = OpenAI(
@@ -39,6 +36,7 @@ class AIChatCommand:
 
     def execute(self, msg, chat):
         """执行AI聊天命令"""
+        print(msg)
         content = msg.content.strip()
         chat_name = msg.chat_info()['chat_name']
 
@@ -79,3 +77,7 @@ class AIChatCommand:
 
         except Exception as e:
             chat.SendMsg(f"出错了: {str(e)}", who=chat_name)
+
+    def run(self, chat):
+        msg = self.get_msg(chat)
+        self.execute(msg, chat)
