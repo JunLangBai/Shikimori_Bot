@@ -16,6 +16,7 @@ json_path = script_dir / "Json" / "BotData.json"
 # 获取文件夹路径（即 Json 文件所在的目录）
 folder_path = json_path.parent
 
+
 # 检查文件夹是否存在，如果不存在则创建
 if not folder_path.exists():
     folder_path.mkdir(parents=True, exist_ok=True)
