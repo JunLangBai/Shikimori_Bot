@@ -7,9 +7,8 @@ SYSTEM_PROMPT = "你是一个乐于助人的AI助手，请用简洁友好的语�
 TRIGGER_WORDS = "式守"
 STRICT_MODE = True
 
-class LogLevel:
-    info = 0
-    error = 1
+
+
 
 
 
