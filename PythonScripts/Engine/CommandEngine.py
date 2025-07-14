@@ -3,10 +3,7 @@ import importlib
 import time
 from pathlib import Path
 
-from comtypes.tools.tlbparser import char_type
-
 from PythonScripts.Command.Command import Command
-import re
 
 
 class CommandEngine:
