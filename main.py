@@ -2,11 +2,15 @@ from wxauto import WeChat
 from wxauto.msgs import FriendMessage
 import time
 import json
-from Config.BotData import GroupData
+from PythonScripts.Config.BotData import GroupData
 from pathlib import Path
 
-from PythonScripts.Engine.CommandEngine import CommandEngine
 from PythonScripts.libraries.AIChat.AIChat import *
+from PythonScripts.Engine.CmdEngine import *
+
+init = CmdEngine().mainmenu()
+
+from PythonScripts.Engine.CommandEngine import CommandEngine
 
 wx = WeChat()
 engine = CommandEngine()
