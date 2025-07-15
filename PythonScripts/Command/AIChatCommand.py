@@ -1,16 +1,20 @@
-
 import time
 import threading
 from collections import deque
 from openai import OpenAI
-from PythonScripts.Command.AISignCommand import TRIGGER_WORDS, STRICT_MODE
-from PythonScripts.Config.BotConfig import OLLAMA_BASE_URL, OLLAMA_API_KEY, MODEL_NAME, SYSTEM_PROMPT
+from PythonScripts.Config.BotConfig import OLLAMA_BASE_URL, OLLAMA_API_KEY
 
 from PythonScripts.Command.Command import Command
 
-class AIChatCommand(Command):
+from PythonScripts.Config.BotData import *
 
-    aliases = ['式守']
+class AIChatCommand(Command):
+    config = LoadConfigData()
+
+    aliases = []
+    for c in config["SYSTEM_PROMPT"].keys():
+        aliases.append(c)
+
     strict = False
     def __init__(self):
         # 初始化OpenAI客户端
@@ -38,7 +42,7 @@ class AIChatCommand(Command):
                 return True
             return False
 
-    def execute(self, msg, chat):
+    def execute(self, msg, chat,cmd):
         """执行AI聊天命令"""
         print(msg)
         content = msg.content.strip()
@@ -60,12 +64,13 @@ class AIChatCommand(Command):
 
         try:
             # 准备完整上下文
-            messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+            messages = [{"role": "system", "content": self.config["SYSTEM_PROMPT"][cmd]}]
             messages.extend(list(history))
+            model = self.config["MODEL_NAME"]
 
             # 调用AI模型
             response = self.client.chat.completions.create(
-                model=MODEL_NAME,
+                model=model,
                 messages=messages,
                 temperature=0.7
             )

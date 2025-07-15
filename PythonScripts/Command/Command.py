@@ -8,5 +8,5 @@ class Command(ABC):
     strict = True
 
     @abstractmethod
-    def execute(self,msg,chat):
+    def execute(self,msg,chat,cmd):
         """子类必须实现此方法"""

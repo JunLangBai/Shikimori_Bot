@@ -2,9 +2,8 @@ from PythonScripts.Command.Command import Command
 import json
 import os
 from datetime import datetime
-from PythonScripts.Config.BotConfig import *
+from PythonScripts.Config.BotData import *
 
-TRIGGER_WORDS = TRIGGER_WORDS
 
 class AISignCommand(Command):
     aliases = ['打卡',"签到"]
@@ -36,7 +35,7 @@ class AISignCommand(Command):
         """获取当前日期字符串（格式YYYYMMDD）"""
         return datetime.now().strftime("%Y%m%d")
 
-    def execute(self, msg, chat):
+    def execute(self, msg, chat,cmd):
         print(msg)
         chat_id = msg.sender
         user_id = msg.id

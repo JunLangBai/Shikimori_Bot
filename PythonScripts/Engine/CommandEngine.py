@@ -8,9 +8,6 @@ from PythonScripts.Command import *
 
 class CommandEngine:
     def __init__(self):
-        live =  AliveCommand()
-        sign = AISignCommand()
-        chat = AIChatCommand()
         self.commands = {}
         self._import_command_modules()
         self._discover_commands()
@@ -130,8 +127,9 @@ class CommandEngine:
             if matched:
                 print(f"执行命令: {command_name} (strict={command_instance.strict})")
                 try:
+                    cmd = command_name
                     time.sleep(0.5)
-                    command_instance.execute(msg, chat)
+                    command_instance.execute(msg,chat,cmd)
                     return True
                 except Exception as e:
                     print(f"命令执行出错: {e}")

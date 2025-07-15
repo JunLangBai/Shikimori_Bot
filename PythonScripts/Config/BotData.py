@@ -7,7 +7,9 @@ wxmsgdic = {}
 
 def DefaultBotData():
     data = {
-        "group": []
+        "group": [],
+        "MODEL_NAME":[],
+        "SYSTEM_PROMPT":[],
     }
     return data
 

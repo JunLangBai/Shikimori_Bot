@@ -3,7 +3,6 @@ import time
 import threading
 from collections import deque
 from openai import OpenAI
-from PythonScripts.Command.AISignCommand import TRIGGER_WORDS, STRICT_MODE
 from PythonScripts.Config.BotConfig import OLLAMA_BASE_URL, OLLAMA_API_KEY, MODEL_NAME, SYSTEM_PROMPT
 
 
