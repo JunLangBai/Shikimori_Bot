@@ -1,0 +1,1 @@
+2025-07-16 01:14:41.541 sessionbox.py[247] _click -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ListItemControl}

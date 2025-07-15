@@ -16,7 +16,7 @@ wx = WeChat()
 engine = CommandEngine()
 
 script_dir = Path(__file__).resolve().parent
-json_path = script_dir / "Json" / "BotData.json"
+json_path = "Json/ BotData.json"
 
 # 获取文件夹路径（即 Json 文件所在的目录）
 folder_path = json_path.parent
