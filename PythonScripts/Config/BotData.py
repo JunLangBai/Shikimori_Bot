@@ -1,12 +1,13 @@
 import json
 from wxauto.msgs import FriendMessage
+import os
 
 # 初始化全局变量
 wxmsgdic = {}
 
 def DefaultBotData():
     data = {
-        "group": group_value
+        "group": []
     }
     return data
 
@@ -67,13 +68,15 @@ def LoadConfigData():
             config = json.load(f)
     else:
         SaveConfigData(DefaultBotData())
+        return DefaultBotData()
     return config
 
 def SaveConfigData(data):
+    os.makedirs('Json', exist_ok=True)  # 自动创建目录
     try:
         with open('Json/config.json', 'w') as f:
             json.dump(data, f, indent=4)
-        print(f"配置数据已成功保存到 {filename}")
+        print(f"配置数据已成功保存到 Json/config.json")
     except (IOError, TypeError) as e:
         print(f"保存配置文件时出错: {e}")
     except Exception as e:
