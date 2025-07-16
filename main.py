@@ -40,12 +40,14 @@ def on_message(msg, chat):
     GroupData(msg,json_path)
     if isinstance(msg, FriendMessage):
         engine.execute_command(msg,chat)
-        t = time.time()
+        # t = 0
+        # t = time.time()
 
-    if t > 30:
-        t = time.time()
-        sim = RandomReply(msg.chat_info()['chat_name'],"式守请按群冷场的场景去开始对话")
-        engine.execute_command(sim,chat)
+    # if t > 30:
+    #     t = 0
+    #     t = time.time()
+    #     sim = RandomReply(msg.chat_info()['chat_name'],"式守请按群冷场的场景去开始对话")
+    #     engine.execute_command(sim,chat)
 
 print("余小宁")
 

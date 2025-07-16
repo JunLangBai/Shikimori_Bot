@@ -11,9 +11,9 @@ from PythonScripts.Config.BotData import *
 class AIChatCommand(Command):
     config = LoadConfigData()
 
-    aliases = ["式守"]
-    # for c in config["SYSTEM_PROMPT"].keys():
-    #     aliases.append(c)
+    aliases = []
+    for c in config["SYSTEM_PROMPT"].keys():
+        aliases.append(c)
 
     strict = False
     def __init__(self):
@@ -64,8 +64,8 @@ class AIChatCommand(Command):
 
         try:
             # 准备完整上下文
-            messages = [{"role": "system", "content": SYSTEM_PROMPT}]
-            # self.config["SYSTEM_PROMPT"][cmd]
+            messages = [{"role": "system", "content": self.config["SYSTEM_PROMPT"][cmd]}]
+
             messages.extend(list(history))
             model = self.config["MODEL_NAME"]
 
