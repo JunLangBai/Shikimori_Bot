@@ -20,6 +20,8 @@ engine = CommandEngine()
 
 script_dir = Path(__file__).resolve().parent
 json_path = "Json/ BotData.json"
+
+config_path = LoadConfigData()
 #
 # # 获取文件夹路径（即 Json 文件所在的目录）
 # folder_path = json_path.parent
@@ -49,9 +51,8 @@ def on_message(msg, chat):
     #     sim = RandomReply(msg.chat_info()['chat_name'],"式守请按群冷场的场景去开始对话")
     #     engine.execute_command(sim,chat)
 
-print("余小宁")
-
-wx.AddListenChat(nickname="傻逼机器测试群", callback=on_message)
+for i in config_path["group"]:
+    wx.AddListenChat(nickname=i, callback=on_message)
 
 # 保持程序运行
 wx.KeepRunning()
