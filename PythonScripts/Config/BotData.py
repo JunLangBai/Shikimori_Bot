@@ -11,6 +11,8 @@ def DefaultBotData():
         "model_list":[],
         "MODEL_NAME":"",
         "SYSTEM_PROMPT":{},
+        "BLACKLIST":[],
+        "FILTER_WORDS":[]
     }
     return data
 
