@@ -22,24 +22,10 @@ script_dir = Path(__file__).resolve().parent
 json_path = "Json/ BotData.json"
 
 config_path = LoadConfigData()
-#
-# # 获取文件夹路径（即 Json 文件所在的目录）
-# folder_path = json_path.parent
-#
-# t = time.time()
-#
-# # 检查文件夹是否存在，如果不存在则创建
-# if not folder_path.exists():
-#     folder_path.mkdir(parents=True, exist_ok=True)
-#     print(f"文件夹已创建: {folder_path}")
-# else:
-#     print(f"文件夹已存在: {folder_path}")
-
 
 # 消息处理函数
 def on_message(msg, chat):
-    global t
-    GroupData(msg,json_path)
+    GroupData(msg)
     if isinstance(msg, FriendMessage):
         engine.execute_command(msg,chat)
         # t = 0

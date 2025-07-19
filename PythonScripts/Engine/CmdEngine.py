@@ -13,6 +13,30 @@ class CmdEngine:
         else:  # macOS/Linux
             os.system('clear')
 
+    def has_empty_value(self,data):
+        # 处理字典类型
+        if isinstance(data, dict):
+            # 检查字典自身是否为空
+            if not data:
+                return True
+            # 递归检查所有值
+            for value in data.values():
+                if self.has_empty_value(value):
+                    return True
+        # 处理列表类型
+        elif isinstance(data, list):
+            # 检查列表是否为空或包含空值
+            if not data:  # 空列表 [] 被视为空值
+                return True
+            for item in data:
+                if self.has_empty_value(item):
+                    return True
+        # 处理基本数据类型
+        elif data is None or data == "":
+            return True
+        return False
+
+
     def addgroup(self):
         a = str(input("输入你要监听的群组名称（必须与微信群名一致！）"))
         print()
@@ -325,8 +349,15 @@ class CmdEngine:
             try:
                 cmd = int(input("输入数字并按下回车进行相应命令： "))
                 if cmd == 1:
-                    self.clear_console()
-                    break
+                    try:
+                        if self.has_empty_value(self.config):
+                            print("配置文件不完整！")
+                            continue
+                        else:
+                            self.clear_console()
+                            break
+                    except json.JSONDecodeError:
+                        print("JSON 格式错误")
                 if cmd == 2:
                     self.configmenu()
                 if cmd == 3:
